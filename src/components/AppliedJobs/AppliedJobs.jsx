@@ -1,6 +1,6 @@
 
 
-const AppliedJob = () => {
+const AppliedJobs = () => {
     return (
         <div>
             <h1>this is applied jobs</h1>
@@ -8,4 +8,4 @@ const AppliedJob = () => {
     );
 };
 
-export default AppliedJob;
+export default AppliedJobs;
