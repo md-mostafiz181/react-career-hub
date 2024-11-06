@@ -15,7 +15,9 @@ const FeatureJob = ({job}) => {
             <button>{job_type}</button>
             <h2>{salary}</h2>
 
+            <Link to={`/job/${id}`}>
             <button className="view-btn">View Details</button>
+            </Link>
         </div>
     );
 };
