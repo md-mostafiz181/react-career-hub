@@ -1,0 +1,14 @@
+.feature-job{
+    border: 5px solid green;
+    border-radius: 10px;
+    margin: 10px;
+    padding: 10px;
+}
+
+.view-btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: coral;
+    color: white;
+    border-radius: 5px;
+}

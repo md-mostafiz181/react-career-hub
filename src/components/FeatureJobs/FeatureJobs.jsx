@@ -1,8 +1,10 @@
 import { useEffect, useState } from "react";
 import FeatureJob from "../FeatureJob/FeatureJob";
+import "./FeatureJobs.css"
 
 const FeatureJobs = () => {
   const [jobs, setJobs] = useState([]);
+  const [dataLength,setDataLength]=useState(4)
 
   useEffect(() => {
     fetch("jobs.json")
@@ -21,10 +23,14 @@ const FeatureJobs = () => {
                 </p>
       </div>
 
-      <div>
+      <div className="featuresJob-container">
         {
-            jobs.map(job => <FeatureJob key={job.id} job={job}></FeatureJob>  )
+            jobs.slice(0,dataLength).map(job => <FeatureJob key={job.id} job={job}></FeatureJob>  )
         }
+      </div>
+
+      <div className={dataLength===jobs.length && "hidden"}>
+         <button onClick={()=>setDataLength(jobs.length)} className="view-btn">Show all jobs</button>
       </div>
     </div>
   );
